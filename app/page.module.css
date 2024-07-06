@@ -191,3 +191,8 @@
   color: #79FB41;
   margin-top: 10px;
 }
+
+/* Add this to your CSS module (page.module.css) */
+.bottomSpace {
+  height: 200px;
+}

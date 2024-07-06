@@ -109,18 +109,20 @@ const ClientComponent = dynamic(() =>
 
     return (
       <div className={styles.container}>
-        <div className={styles.topBanner}>
-          <div className={styles.scrollingImages}>
-            <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
-            <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
-            <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
-            <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
-            <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
-            <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
-            <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
-            <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
+        <a href="https://dzerof-home.vercel.app/" className={styles.topBannerLink}>
+          <div className={styles.topBanner}>
+            <div className={styles.scrollingImages}>
+              <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
+              <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
+              <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
+              <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
+              <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
+              <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
+              <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
+              <img src="https://i.imgur.com/nwUHd9n.png" alt="Scrolling Logo" className={styles.scrollImage} />
+            </div>
           </div>
-        </div>
+        </a>
         <main className={styles.main}>
           <div className={styles.notionContent}>
             {content.map((block, index) => {
@@ -169,6 +171,7 @@ const ClientComponent = dynamic(() =>
               }
             })}
           </div>
+          <div className={styles.bottomSpace}></div>
         </main>
       </div>
     );
