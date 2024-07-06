@@ -1,230 +1,193 @@
-.main {
+.container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
+.topBanner {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
+  height: clamp(80px, 10vw, 104.65px); /* 반응형 높이 조절 */
+  background-color: #0009FF;
+  z-index: 1000;
+  overflow: hidden;
 }
 
-.description a {
+.scrollingImages {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  height: 100%;
+  animation: scroll 20s linear infinite;
 }
 
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+.scrollImage {
+  height: clamp(60px, 10vw, 111.78px); /* 반응형 높이 조절 */
+  margin-right: 0;
 }
 
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 4));
+  }
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  margin-top: clamp(150px, 20vw, 194.65px); /* 반응형 마진 조절 */
+}
+
+.notionContent {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: clamp(1em, 1.5vw, 1.05em); /* 반응형 폰트 크기 조절 */
+}
+
+.notionContent h1 {
+  font-size: clamp(2em, 4vw, 2.625em); /* 반응형 폰트 크기 조절 */
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+.notionContent h2 {
+  font-size: clamp(1.75em, 3.5vw, 2.1em); /* 반응형 폰트 크기 조절 */
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+.notionContent h3 {
+  font-size: clamp(1.5em, 3vw, 1.575em); /* 반응형 폰트 크기 조절 */
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+.notionContent p {
+  font-size: clamp(1em, 1.5vw, 1.05em); /* 반응형 폰트 크기 조절 */
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.imageContainer {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.image {
   max-width: 100%;
-  width: var(--max-width);
+  height: auto;
 }
 
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+.quote {
+  font-size: clamp(1em, 1.5vw, 1.05em); /* 반응형 폰트 크기 조절 */
+  font-style: italic;
+  border-left: 1px solid white;
+  padding-left: 20px;
+  margin: 20px 0;
+  color: white;
 }
 
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
-}
-
-.center {
+.callout {
+  font-size: clamp(1em, 1.5vw, 1.05em); /* 반응형 폰트 크기 조절 */
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 9999px; /* 최대 radius를 적용하여 pill 모양 만들기 */
+  padding: 15px 25px; /* 좌우 패딩을 조금 늘려 더 나은 모양 만들기 */
+  margin: 20px 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
+  align-items: center; /* flex-start에서 center로 변경하여 세로 중앙 정렬 */
+  border: 1px solid rgba(255, 255, 255, 1); /* 1px 테두리 추가 */
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
+.calloutIcon {
+  margin-right: 15px; /* 아이콘과 텍스트 사이의 간격 늘리기 */
+  font-size: clamp(1em, 2vw, 1.2em); /* 반응형 아이콘 크기 조절 */
 }
 
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
+.link {
+  color: #79FB41;
+  text-decoration: none;
 }
 
-.center::before,
-.center::after {
-  content: "";
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
+.link:hover {
+  text-decoration: underline;
 }
 
-.logo {
+.codeBlockWrapper {
+  margin: 40px 0;
   position: relative;
 }
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
 
-  .card:hover span {
-    transform: translateX(4px);
-  }
+.codeBlock {
+  font-size: clamp(1em, 1.5vw, 1.05em); /* 반응형 폰트 크기 조절 */
+  background-color: #000000;
+  border-radius: 0px;
+  padding: 15px;
+  overflow-x: auto;
+  white-space: pre;
+  margin: 0;
+  border: 1px solid #ffffff; /* 흰색 테두리 추가 */
 }
 
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
+.codeBlock::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
-  }
+.codeBlock code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+  display: inline-block;
+  min-width: 100%;
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
+.inlineCode {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: clamp(0.8em, 1.2vw, 0.9em); /* 반응형 폰트 크기 조절 */
+  background: rgba(134, 134, 134, 0.15);
+  color: #79FB41;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  white-space: nowrap;
 }
 
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
+.bookmark {
+  display: flex;
+  flex-direction: column;
+  border-left: 0px solid #79FB41;
+  padding: 0px;
+  margin: 20px 0;
+  color: white;
+  text-decoration: none;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+.bookmarkTitle {
+  font-size: clamp(1em, 2vw, 1.2em); /* 반응형 폰트 크기 조절 */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bookmarkDescription {
+  font-size: clamp(0.9em, 1.5vw, 1em); /* 반응형 폰트 크기 조절 */
+  color: #d3d3d3;
+}
+
+.bookmarkLink {
+  font-size: clamp(0.9em, 1.5vw, 1em); /* 반응형 폰트 크기 조절 */
+  color: #79FB41;
+  margin-top: 10px;
 }
