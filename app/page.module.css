@@ -129,7 +129,7 @@
 }
 
 .codeBlockWrapper {
-  margin: 40px 0;
+  margin: 10px 0;
   position: relative;
 }
 
@@ -192,7 +192,61 @@
   margin-top: 10px;
 }
 
-/* Add this to your CSS moduleee (page.module.css) */
 .bottomSpace {
   height: 200px;
+}
+
+.nestedList {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.nestedListItem {
+  position: relative;
+}
+
+.nestedListItem::before {
+  position: absolute;
+  left: -15px;
+}
+
+.numberedList, .bulletedList {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.numberedListItem {
+  margin-left: 0px;
+  margin-bottom: 10px;
+  position: relative;
+  line-height: 2; /* 줄 간격 추가 */
+}
+
+.bulletedListItem {
+  margin-left: 10px;
+  margin-bottom: 5px; /* 간격을 줄이기 위해 margin-bottom 값을 5px로 조정 */
+  position: relative;
+  line-height: 2; /* 줄 간격 추가 */
+}
+
+
+.numberedListItem {
+  list-style-type: none;
+}
+
+.bulletedListItem {
+  list-style-type: none;
+  left: -15px;
+}
+
+.bulletedListItem::before {
+  content: '•';
+  position: absolute;
+  left: -15px;
+}
+
+.listNumber {
+  position: absolute;
+  left: -20px;
 }
