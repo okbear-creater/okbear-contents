@@ -17,6 +17,12 @@ export default function Home() {
       <Link href="/4-ev-nav">
         <h1>4-ev-nav</h1>
       </Link>
+      <Link href="/5-ev-nav-plus">
+        <h1>5-ev-nav-plus</h1>
+      </Link>
+      <Link href="/6-taxi-ui">
+        <h1>6-taxi-ui</h1>
+      </Link>
     </main>
   );
 }
