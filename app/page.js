@@ -14,6 +14,9 @@ export default function Home() {
       <Link href="/3-stock-cal">
         <h1>3-stock-cal</h1>
       </Link>
+      <Link href="/4-ev-nav">
+        <h1>4-ev-nav</h1>
+      </Link>
     </main>
   );
 }
