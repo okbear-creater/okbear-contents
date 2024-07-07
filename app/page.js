@@ -11,6 +11,9 @@ export default function Home() {
       <Link href="/2-suffix-converter">
         <h1>2-suffix-converter</h1>
       </Link>
+      <Link href="/3-stock-cal">
+        <h1>3-stock-cal</h1>
+      </Link>
     </main>
   );
 }
