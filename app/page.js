@@ -23,6 +23,12 @@ export default function Home() {
       <Link href="/6-taxi-ui">
         <h1>6-taxi-ui</h1>
       </Link>
+      <Link href="/test">
+        <h1>test</h1>
+      </Link>
+      <Link href="/test2">
+        <h1>test2</h1>
+      </Link>
     </main>
   );
 }

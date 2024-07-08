@@ -12,10 +12,24 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: clamp(80px, 10vw, 104.65px); /* 반응형 높이 조절 */
-  background-color: #0009FF;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
+
+.topBannerHidden {
+  transform: translateY(-100%);
+}
+
+.bannerContent {
+  font-size: clamp(14px, 2.5vw, 16px);
+  font-weight: bold;
 }
 
 .scrollingImages {
@@ -26,7 +40,7 @@
 }
 
 .scrollImage {
-  height: clamp(60px, 10vw, 111.78px); /* 반응형 높이 조절 */
+  height: clamp(60px, 8vw, 80px);
   margin-right: 0;
 }
 
@@ -43,210 +57,291 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
-  margin-top: clamp(150px, 20vw, 194.65px); /* 반응형 마진 조절 */
+  align-items: flex-start;
+  padding: 2rem 5%;
+  margin-top: clamp(100px, 15vw, 180px);
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.notionContent {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-  font-size: clamp(1em, 1.5vw, 1.05em); /* 반응형 폰트 크기 조절 */
-}
-
-.notionContent h1 {
-  font-size: clamp(2em, 4vw, 2.625em); /* 반응형 폰트 크기 조절 */
-  font-weight: bold;
-  color: white;
-  margin-bottom: 0.5em;
-}
-
-.notionContent h2 {
-  font-size: clamp(1.75em, 3.5vw, 2.1em); /* 반응형 폰트 크기 조절 */
-  font-weight: bold;
-  color: white;
-  margin-bottom: 0.5em;
-}
-
-.notionContent h3 {
-  font-size: clamp(1.5em, 3vw, 1.575em); /* 반응형 폰트 크기 조절 */
-  font-weight: bold;
-  color: white;
-  margin-bottom: 0.5em;
-}
-
-.notionContent p {
-  font-size: clamp(1em, 1.5vw, 1.05em); /* 반응형 폰트 크기 조절 */
-  color: white;
+.main :global(.markdown) {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  margin-bottom: 1em;
-}
-
-.imageContainer {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.image {
-  max-width: 100%;
-  height: auto;
-}
-
-.quote {
-  font-size: clamp(1em, 1.5vw, 1.05em); /* 반응형 폰트 크기 조절 */
-  font-style: italic;
-  border-left: 1px solid white;
-  padding-left: 20px;
-  margin: 20px 0;
   color: white;
+  width: 100%;
 }
 
-.callout {
-  font-size: clamp(1em, 1.5vw, 1.05em); /* 반응형 폰트 크기 조절 */
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 9999px; /* 최대 radius를 적용하여 pill 모양 만들기 */
-  padding: 15px 25px; /* 좌우 패딩을 조금 늘려 더 나은 모양 만들기 */
-  margin: 20px 0;
-  display: flex;
-  align-items: center; /* flex-start에서 center로 변경하여 세로 중앙 정렬 */
-  border: 1px solid rgba(255, 255, 255, 1); /* 1px 테두리 추가 */
+.main :global(.markdown h1) {
+  font-size: clamp(1.8em, 4vw, 2.2em);
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3em;
 }
 
-.calloutIcon {
-  margin-right: 15px; /* 아이콘과 텍스트 사이의 간격 늘리기 */
-  font-size: clamp(1em, 2vw, 1.2em); /* 반응형 아이콘 크기 조절 */
+.main :global(.markdown h2) {
+  font-size: clamp(1.5em, 3.5vw, 2em);
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3em;
 }
 
-.link {
-  color: #79FB41;
+.main :global(.markdown h3) {
+  font-size: clamp(1.2em, 3vw, 1.6em);
+}
+
+.contentImage,
+.main :global(.markdown img) {
+  width: 104%;
+  max-width: 104%;
+  height: auto;
+  display: block;
+  margin: 1rem -2%;
+  border-radius: 8px;
+}
+
+.main :global(.markdown blockquote) {
+  border-left: 4px solid #ddd;
+  padding-left: 1em;
+  color: #777;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.main :global(.markdown pre) {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  padding: 16px;
+  overflow: auto;
+  width: 100%;
+  font-size: clamp(12px, 1.8vw, 15px);
+}
+
+.main :global(.markdown code) {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: clamp(12px, 1.8vw, 15px);
+}
+
+.main :global(.markdown ul), .main :global(.markdown ol) {
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  line-height: 1.8;
+}
+
+.main :global(.markdown ul li), .main :global(.markdown ol li) {
+  margin-bottom: 0.5em;
+}
+
+.main :global(.markdown a) {
+  color: #3498db;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.link:hover {
+.main :global(.markdown a:hover) {
+  color: #2980b9;
   text-decoration: underline;
 }
 
-.codeBlockWrapper {
-  margin: 10px 0;
+.main :global(.markdown figure) {
+  margin: 1em -2%;
+  text-align: center;
+}
+
+.main :global(.markdown figcaption) {
+  font-style: italic;
+  color: #999;
+  margin-top: 0.5em;
+  font-size: clamp(12px, 1.8vw, 14px);
+}
+
+.main :global(.markdown p) {
+  line-height: 1.5;
+  margin-bottom: 1em;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.bodyText {
+  line-height: 1.8;
+  margin-bottom: 1em;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.quote {
+  line-height: 1.8;
+  margin: 0em 0;
+  padding: 0 2% 0 calc(2% + 6px);
+  text-align: left;
   position: relative;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.quote::before {
+  content: '';
+  position: absolute;
+  left: 0%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: white;
+}
+
+.hyperlink {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.hyperlink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.hyperlink:hover::after {
+  opacity: 1;
+}
+
+.customList {
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  line-height: 1.8;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.customList li {
+  margin-bottom: 0.5em;
 }
 
 .codeBlock {
-  font-size: clamp(1em, 1.5vw, 1.05em); /* 반응형 폰트 크기 조절 */
-  background-color: #000000;
+  background-color: black;
+  border: 2px solid white;
   border-radius: 0px;
-  padding: 15px;
+  padding: 16px;
+  margin: 16px 0;
   overflow-x: auto;
-  white-space: pre;
-  margin: 0;
-  border: 1px solid #ffffff; /* 흰색 테두리 추가 */
+  max-width: 100%;
+  font-size: clamp(12px, 1.8vw, 15px);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .codeBlock::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
+
 
 .codeBlock code {
   font-family: 'Courier New', Courier, monospace;
-  color: #ffffff;
+  color: white;
+  white-space: pre;
   display: inline-block;
   min-width: 100%;
 }
 
 .inlineCode {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  font-size: clamp(0.8em, 1.2vw, 0.9em); /* 반응형 폰트 크기 조절 */
-  background: rgba(134, 134, 134, 0.15);
-  color: #79FB41;
-  border-radius: 3px;
-  padding: 0.2em 0.4em;
-  white-space: nowrap;
-}
-
-.bookmark {
-  display: flex;
-  flex-direction: column;
-  border-left: 0px solid #79FB41;
-  padding: 0px;
-  margin: 20px 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: black;
   color: white;
-  text-decoration: none;
-}
-
-.bookmarkTitle {
-  font-size: clamp(1em, 2vw, 1.2em); /* 반응형 폰트 크기 조절 */
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.bookmarkDescription {
-  font-size: clamp(0.9em, 1.5vw, 1em); /* 반응형 폰트 크기 조절 */
-  color: #d3d3d3;
-}
-
-.bookmarkLink {
-  font-size: clamp(0.9em, 1.5vw, 1em); /* 반응형 폰트 크기 조절 */
-  color: #79FB41;
-  margin-top: 10px;
-}
-
-.bottomSpace {
-  height: 200px;
-}
-
-.nestedList {
-  list-style-type: none;
-  padding-left: 20px;
-}
-
-.nestedListItem {
-  position: relative;
-}
-
-.nestedListItem::before {
-  position: absolute;
-  left: -15px;
-}
-
-.numberedList, .bulletedList {
-  padding-left: 20px;
-  margin-bottom: 10px;
-  list-style-type: none;
-}
-
-.numberedListItem {
+  padding: 2px 4px;
+  border-radius: 999px;
+  border: 1px solid white;
   margin-left: 0px;
-  margin-bottom: 10px;
-  position: relative;
-  line-height: 2; /* 줄 간격 추가 */
+  margin-right: 6px;
+  font-size: clamp(12px, 1.8vw, 15px);
 }
 
-.bulletedListItem {
-  margin-left: 10px;
-  margin-bottom: 5px; /* 간격을 줄이기 위해 margin-bottom 값을 5px로 조정 */
-  position: relative;
-  line-height: 2; /* 줄 간격 추추가 */
+.titleGroup {
+  margin-bottom: 50px;
+  width: clamp(100%, 120%, 140%);
+  margin-left: clamp(-20%, -10%, -5%);
+  margin-right: clamp(-20%, -10%, -5%);
 }
 
-
-.numberedListItem {
-  list-style-type: none;
+.title {
+  font-size: clamp(32px, 7vw, 56px);
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.3;
 }
 
-.bulletedListItem {
-  list-style-type: none;
-  left: -15px;
+.subtitle {
+  font-size: clamp(18px, 3.5vw, 26px);
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.4;
 }
 
-.bulletedListItem::before {
-  content: '•';
-  position: absolute;
-  left: -15px;
+.greyGrade {
+  color: #929292;
 }
 
-.listNumber {
-  position: absolute;
-  left: -20px;
+.whiteGrade {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem 3%;
+    margin-top: clamp(80px, 12vw, 120px);
+  }
+  
+  .titleGroup {
+    width: clamp(104%, 110%, 120%);
+    margin-left: clamp(-10%, -5%, -2%);
+    margin-right: clamp(-10%, -5%, -2%);
+  }
+}
+
+@media (min-width: 1400px) {
+  .main {
+    max-width: 800px;
+  }
+
+  .main :global(.markdown p),
+  .bodyText,
+  .quote,
+  .customList {
+    font-size: 16px;
+  }
+
+  .main :global(.markdown h1) {
+    font-size: 2.2em;
+  }
+
+  .main :global(.markdown h2) {
+    font-size: 2em;
+  }
+
+  .main :global(.markdown h3) {
+    font-size: 1.6em;
+  }
+
+  .codeBlock,
+  .main :global(.markdown pre),
+  .main :global(.markdown code),
+  .inlineCode {
+    font-size: 15px;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .subtitle {
+    font-size: 26px;
+  }
 }

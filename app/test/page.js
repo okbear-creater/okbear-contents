@@ -35,32 +35,32 @@ export default function JTBCPage() {
       </div>
       <main className={`${styles.main} markdown`}>
         <div className={styles.titleGroup}>
-          <h2 className={styles.title}>북악관 엘리베이터 최적 경로 네비게이션</h2>
-          <h3 className={styles.subtitle}>Streamlit과 Python을 활용한 효율적 이동 경로 탐색</h3>
+          <h2 className={styles.title}>테스트</h2>
+          <h3 className={styles.subtitle}>테스트라고</h3>
         </div>
-
-        <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbd3fd748-abfb-453d-a988-56268eecc1cb%2Faa19498e-65cf-4902-9a22-1a11472afc96%2Fwefiojweofji.jpg?table=block&id=b8a8b8b3-ec97-408e-8440-6ab11a89ec34&spaceId=bd3fd748-abfb-453d-a988-56268eecc1cb&width=2000&userId=c5a21a5c-bcab-4789-a4d7-b09c43662fb2&cache=v2" alt="북악관 엘리베이터 최적 경로 계산기" className={styles.contentImage} />
-
+        
+        <h1>북악관 엘리베이터 최적 경로 계산기: Streamlit과 Python을 활용한 효율적 이동 경로 탐색</h1>
+        
+        <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbd3fd748-abfb-453d-a988-56268eecc1cb%2Faa19498e-65cf-4902-9a22-1a11472afc96%2Fwefiojweofji.jpg?table=block&id=1f97cb08-b7c6-402b-9e39-4b577b64995b&spaceId=bd3fd748-abfb-453d-a988-56268eecc1cb&width=2000&userId=c5a21a5c-bcab-4789-a4d7-b09c43662fb2&cache=v2" alt="북악관 엘리베이터" className={styles.contentImage} />
+        
         <p className={styles.bodyText}>
-          <a href="https://efficient-ev-route-nav.streamlit.app/" className={styles.hyperlink}>북악관 엘베 최적 경로 계산기 바로가기</a>
+          <a href="https://efficient-ev-route-nav.streamlit.app/" className={styles.hyperlink}>with st emoji about image online</a>
         </p>
         <p className={styles.bodyText}>
-          <a href="https://github.com/okbear-creater/efficient-ev-route-nav" className={styles.hyperlink}>GitHub Repo</a>
+          <a href="https://github.com/okbear-creater/efficient-ev-route-nav" className={styles.hyperlink}>https://github.com/okbear-creater/efficient-ev-route-nav</a>
         </p>
-
-        <h2>문제 인식</h2>
-        <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbd3fd748-abfb-453d-a988-56268eecc1cb%2F63a47287-6222-441d-8e38-1c782ebc6320%2F8768f4447d15e9a2.webp?table=block&id=7d327e6e-5f2e-46cb-87b1-857bb33a46cd&spaceId=bd3fd748-abfb-453d-a988-56268eecc1cb&width=2000&userId=c5a21a5c-bcab-4789-a4d7-b09c43662fb2&cache=v2" alt="북악관 엘리베이터 구조" className={styles.contentImage} />
         <p className={styles.bodyText}>
-          보통 고층 건물의 엘리베이터는 고층부와 저층부로 나누어지거나 짝수층과 홀수층으로 나뉘지만, 국민대학교 북악관의 엘리베이터는 매우 복잡하게 나누어져 있습니다. 엘리베이터 5개가 불규칙하게 다양한 층에 멈추는데, 그 층들이 아래와 같습니다:
+          <a href="http://youtube.com" className={styles.hyperlink}>이건 하이퍼링크</a>
         </p>
+        
+        <h2>문제 인식식</h2>
+        <p className={styles.bodyText}>보통 고층 건물의 엘리베이터는 고층부와 저층부로 나누어지거나 짝수층과 홀수층으로 나뉘지만, 국민대학교 북악관의 엘리베이터는 매우 복잡하게 나누어져 있습니다. 엘리베이터 5개가 불규칙하게 다양한 층에 멈추는데, 그 층들이 아래와 같습니다:</p>
         <ul className={styles.customList}>
           <li><code className={styles.inlineCode}>left_elevators = [[1, 5, 9], [1, 7, 12, 13, 14, 15]]</code></li>
           <li><code className={styles.inlineCode}>right_elevators = [[1, 11], [1, 5, 8], [1, 6, 10]]</code></li>
         </ul>
-        <p className={styles.bodyText}>
-          이처럼 복잡한 엘리베이터 배치 때문에 층간 이동 시 어떻게 엘리베이터를 갈아타고 계단을 중간에 섞어가며 이동해야 가장 효율적인지 알기가 매우 어렵습니다. 이 문제를 해결하기 위해 본 프로그램을 설계했습니다.
-        </p>
-
+        <p className={styles.bodyText}>이처럼 복잡한 엘리베이터 배치 때문에 층간 이동 시 어떻게 엘리베이터를 갈아타고 계단을 중간에 섞어가며 이동해야 가장 효율적인지 알기가 매우 어렵습니다. 이 문제를 해결하기 위해 본 프로그램을 설계했습니다.</p>
+        
         <h2>프로그램 작성 과정</h2>
         <ol className={styles.customList}>
           <li><strong>Python으로 원하는 결과가 나오게 로직을 구성합니다.</strong>
@@ -80,7 +80,7 @@ export default function JTBCPage() {
           </li>
           <li><strong>Chat-GPT를 이용해 UI 요소를 적용시킨 전체 코드를 만듭니다.</strong></li>
         </ol>
-
+        
         <h2>코드 설명</h2>
         <ol className={styles.customList}>
           <li><strong>엘리베이터 정보 정의</strong>
@@ -138,14 +138,10 @@ end_floor = st.slider("도착 층", 1, 15, 1)`}
             <p className={styles.bodyText}><code className={styles.inlineCode}>st.metric</code>을 사용하여 경로와 피로도 점수를 시각적으로 표시합니다.</p>
           </li>
         </ol>
-
+        
         <h2>결론</h2>
-        <p className={styles.bodyText}>
-          이 프로그램은 복잡한 엘리베이터 배치를 가진 고층 건물에서 효율적으로 이동할 수 있는 최적 경로를 제공합니다. Streamlit을 사용하여 간편한 웹 인터페이스를 구축하였으며, 피로도 점수를 통해 사용자가 가장 덜 피곤하게 이동할 수 있는 경로를 계산합니다. 이를 통해 사용자들은 보다 편리하고 효율적으로 건물 내에서 이동할 수 있습니다.
-        </p>
-        <p className={styles.bodyText}>
-          프로그램을 실행하고 최적의 이동 경로를 찾아보세요. 고층 건물 내에서의 이동이 훨씬 수월해질 것입니다.
-        </p>
+        <p className={styles.bodyText}>이 프로그램은 복잡한 엘리베이터 배치를 가진 고층 건물에서 효율적으로 이동할 수 있는 최적 경로를 제공합니다. Streamlit을 사용하여 간편한 웹 인터페이스를 구축하였으며, 피로도 점수를 통해 사용자가 가장 덜 피곤하게 이동할 수 있는 경로를 계산합니다. 이를 통해 사용자들은 보다 편리하고 효율적으로 건물 내에서 이동할 수 있습니다.</p>
+        <p className={styles.bodyText}>프로그램을 실행하고 최적의 이동 경로를 찾아보세요. 고층 건물 내에서의 이동이 훨씬 수월해질 것입니다.</p>
       </main>
     </div>
   );

@@ -35,16 +35,14 @@ export default function JTBCPage() {
       </div>
       <main className={`${styles.main} markdown`}>
         <div className={styles.titleGroup}>
-          <h2 className={styles.title}>Chat-GPT API와 Streamlit를 활용한 종결표현 변환 웹서비스</h2>
-          <h3 className={styles.subtitle}>보고서체 컨버터</h3>
+          <h2 className={styles.title}>테스트2 야</h2>
+          <h3 className={styles.subtitle}>파일명좀 잘 볼껄</h3>
         </div>
 
-        <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbd3fd748-abfb-453d-a988-56268eecc1cb%2F6c154695-5b32-46de-9972-a01bebde5959%2FUntitled.png?table=block&id=4a711047-c38b-48b2-a45c-073613716b49&spaceId=bd3fd748-abfb-453d-a988-56268eecc1cb&width=2000&userId=c5a21a5c-bcab-4789-a4d7-b09c43662fb2&cache=v2" alt="Chat-GPT API와 Streamlit를 활용한 종결표현 변환 웹서비스" className={styles.contentImage} />
-
-        <p className={styles.bodyText}>
-          <a href="https://suffix-gky3cjevzy8dy5fx3fjjys.streamlit.app/?fbclid=PAAaam75UQVBCE1RtzMbCSLBLd-SH4E_8E_U3DZ-SoHqwwIYgKz7hwSor7HlU_aem_AYzpUdVF4Ir6QbvdDwJ9EE2p_9KsMgSDh7KfbviSNyi2lbSRpE13FVhBQAaJM0hxzW0" className={styles.hyperlink}>보고서체 컨버터 바로가기</a>
-        </p>
-
+        <h1>Chat-GPT API와 Streamlit를 활용한 종결표현 변환 웹서비스</h1>
+        
+        <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbd3fd748-abfb-453d-a988-56268eecc1cb%2F6c154695-5b32-46de-9972-a01bebde5959%2FUntitled.png?table=block&id=478c53f9-c71f-407b-9682-00b3acf5ad43&spaceId=bd3fd748-abfb-453d-a988-56268eecc1cb&width=2000&userId=c5a21a5c-bcab-4789-a4d7-b09c43662fb2&cache=v2" alt="Untitled.png" className={styles.contentImage} />
+        
         <h2>프로젝트의 동기</h2>
         <p className={styles.bodyText}>
           챗지피티(ChatGPT)는 강력한 언어 모델로, 다양한 문장 변환 및 생성 작업을 수행할 수 있습니다. 하지만, 챗지피티의 UI를 직접 사용하는 것은 비전문가에게 다소 번거로울 수 있으며, 매번 같은 결과를 보장하지 않습니다. 또한, 사용자가 원하는 특정한 형태로 문장을 변환하는 것, 예를 들어 "~입니다." 체를 "~이다." 체로 바꾸는 작업은 간단해 보이지만, 실제로는 여러 번의 시도와 수정이 필요할 수 있습니다.
@@ -87,10 +85,8 @@ export default function JTBCPage() {
           프롬프트 형식에 사용자의 입력을 끼워 넣는 이 방식은 Chat-GPT를 활용한 텍스트 변환의 효율성과 정확성을 높이는 데 중요한 역할을 합니다.
         </p>
 
-        <figure>
-          <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbd3fd748-abfb-453d-a988-56268eecc1cb%2Fef2c18db-82a5-457e-b095-2546b2176aae%2FUntitled.png?table=block&id=e187433c-dcae-42e3-be9e-e5d93c86d175&spaceId=bd3fd748-abfb-453d-a988-56268eecc1cb&width=2000&userId=c5a21a5c-bcab-4789-a4d7-b09c43662fb2&cache=v2" alt="사용자가 텍스트를 넣고 변환 버튼을 누른 결과" className={styles.contentImage} />
-          <figcaption>사용자가 텍스트를 넣고 변환 버튼을 누른 결과</figcaption>
-        </figure>
+        <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbd3fd748-abfb-453d-a988-56268eecc1cb%2Fef2c18db-82a5-457e-b095-2546b2176aae%2FUntitled.png?table=block&id=31dfb37b-ba17-4c09-ba5a-52ddc3d36fbd&spaceId=bd3fd748-abfb-453d-a988-56268eecc1cb&width=2000&userId=c5a21a5c-bcab-4789-a4d7-b09c43662fb2&cache=v2" alt="Untitled.png" className={styles.contentImage} />
+        <p className={styles.bodyText}>사용자가 텍스트를 넣고 변환 버튼을 누른 결과</p>
 
         <h2>사용자 경험 향상</h2>
         <p className={styles.bodyText}>
