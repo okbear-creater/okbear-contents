@@ -2,7 +2,7 @@ import { Client } from '@notionhq/client';
 import styles from "../page.module.css";
 
 // 1시간마다 페이지 재생성
-export const revalidate = 3600;
+// export const revalidate = 3600;
 
 async function getNotionContent() {
   const notion = new Client({ auth: process.env.NOTION_API_KEY });
