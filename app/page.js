@@ -23,11 +23,8 @@ export default function Home() {
       <Link href="/6-taxi-ui">
         <h1>6-taxi-ui</h1>
       </Link>
-      <Link href="/test">
-        <h1>test</h1>
-      </Link>
-      <Link href="/test2">
-        <h1>test2</h1>
+      <Link href="/7-Stable-Warp-Fusion">
+        <h1>7-Stable-Warp-Fusion</h1>
       </Link>
     </main>
   );
