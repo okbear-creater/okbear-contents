@@ -26,6 +26,12 @@ export default function Home() {
       <Link href="/7-Stable-Warp-Fusion">
         <h1>7-Stable-Warp-Fusion</h1>
       </Link>
+      <Link href="/8-notion-api-problem">
+        <h1>8-notion-api-problem</h1>
+      </Link>
+      <Link href="/9-brookesia-redesign">
+        <h1>9-brookesia-redesign</h1>
+      </Link>
     </main>
   );
 }
