@@ -32,6 +32,9 @@ export default function Home() {
       <Link href="/9-brookesia-redesign">
         <h1>9-brookesia-redesign</h1>
       </Link>
+      <Link href="/10-rabbit-r1-plus">
+        <h1>10-rabbit-r1-plus</h1>
+      </Link>
     </main>
   );
 }
