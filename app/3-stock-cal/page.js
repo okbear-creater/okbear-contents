@@ -27,12 +27,6 @@ export default function JTBCPage() {
 
   return (
     <div className={styles.container}>
-      <div className={`${styles.topBanner} ${!isVisible ? styles.topBannerHidden : ''}`}>
-        <a href="https://dzerof-home.vercel.app/" className={styles.bannerContent} style={{ textDecoration: 'none' }}>
-          <span className={styles.greyGrade}>A+ A0 B+ B0 C+ C0 D+ </span>
-          <span className={styles.whiteGrade}>D0 F</span>
-        </a>
-      </div>
       <main className={`${styles.main} markdown`}>
         <div className={styles.titleGroup}>
           <h2 className={styles.title}>실시간 주식 수익률 추적 웹사이트: Streamlit과 Yahoo Finance API</h2>
