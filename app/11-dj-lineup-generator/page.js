@@ -24,7 +24,7 @@ export default function DJLineupGenerator() {
         <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbd3fd748-abfb-453d-a988-56268eecc1cb%2F045bce23-6f08-47c9-b029-9730cc858cdf%2FIMG_3982.jpg?table=block&id=1b0745f5-e2ad-4dc9-bc36-2727cdf60d66&spaceId=bd3fd748-abfb-453d-a988-56268eecc1cb&width=2000&userId=c5a21a5c-bcab-4789-a4d7-b09c43662fb2&cache=v2" alt="IMG_3982" className={styles.contentImage} />
         <p className={styles.bodyText}>2024년 7월 27일 송도에서 열린 Google I/O Extended에서 자극을 받아 이 프로그램을 제작했습니다.</p>
         <p className={styles.bodyText}>저는 홍대의 한 클럽에서 해당 주의 DJ 라인업을 소개하는 인스타그램 게시물과 스토리의 그래픽 작업을 맡고 있습니다. DJ 라인업은 매주 바뀌며, 이를 매번 교체해야 합니다. 인스타그램 게시물과 스토리에 올라가는 영상의 DJ 라인업은 알파벳 순서로 정렬되고 모두 대문자로 표기되어야 합니다.</p>
-        <p className={styles.bodyText}>기존에는 홍대 클럽 운영진에게 받은 DJ 라인업을 ChatGPT(4o, 2024년 8월 기준)에게 요청해 알파벳 순서로 정리하고 대문자로 변환한 뒤 줄바꿈하여 출력했지만, 계속 오류가 발생해 일일이 수작업으로 확인해야 했습니다. DJ 수가 6~7명이라 작업 시간이 많이 걸리지는 않았지만, "Don’t spend 5 minutes manually solving a problem. Spend 5 hours failing to automate it." 정신으로 이 과정을 자동화하는 프로그램을 만들고자 했습니다.</p>
+        <p className={styles.bodyText}>기존에는 홍대 클럽 운영진에게 받은 DJ 라인업을 ChatGPT(4o, 2024년 8월 기준)에게 요청해 알파벳 순서로 정리하고 대문자로 변환한 뒤 줄바꿈하여 출력했지만, 계속 오류가 발생해 일일이 수작업으로 확인해야 했습니다. DJ 수가 6~7명이라 작업 시간이 많이 걸리지는 않았지만, 'Don’t spend 5 minutes manually solving a problem. Spend 5 hours failing to automate it.' 정신으로 이 과정을 자동화하는 프로그램을 만들고자 했습니다.</p>
         <p className={styles.bodyText}>그래서 저는 홍대 클럽 운영진에게 받은 DJ 라인업을 알파벳 순서대로 정리하고, 중복을 제거한 뒤 모두 대문자로 변환하는 도구를 제작했습니다. 이를 통해 그래픽 작업 시 After Effects에 바로 붙여넣어 효율성을 높일 수 있습니다.</p>
 
         <h2>개발 과정</h2>
@@ -35,11 +35,11 @@ export default function DJLineupGenerator() {
         <ul className={styles.customList}>
           <li>필요한 라이브러리 임포트:
               <ul className={styles.customList}>
-                <li>streamlit: 웹 애플리케이션 인터페이스 생성</li>
-                <li>re: 정규 표현식 사용을 위한 라이브러리</li>
+                <li><code className={styles.inlineCode}>streamlit</code>: 웹 애플리케이션 인터페이스 생성</li>
+                <li><code className={styles.inlineCode}>re</code>: 정규 표현식 사용을 위한 라이브러리</li>
               </ul>
           </li>
-          <li>sort_names 함수 정의:
+          <li><code className={styles.inlineCode}>sort_names</code> 함수 정의:
               <ul className={styles.customList}>
                 <li>입력된 텍스트에서 시간 정보를 제거하고 이름만 추출</li>
                 <li>이름을 대문자로 변환, 중복 제거, 알파벳 순 정렬</li>
@@ -47,7 +47,7 @@ export default function DJLineupGenerator() {
           </li>
           <li>웹 인터페이스 구성:
               <ul className={styles.customList}>
-                <li>제목 설정: "DJ Lineup Automator 🎧 🎹 👨‍💻"</li>
+                <li>제목 설정: 'DJ Lineup Automator 🎧 🎹 👨‍💻'</li>
                 <li>'정렬 시킬 Lineup' 섹션 생성</li>
                 <li>금요일과 토요일 각각의 입력 영역 생성</li>
                 <li>'Gimme the Lineup' 버튼 생성</li>
@@ -55,7 +55,7 @@ export default function DJLineupGenerator() {
           </li>
           <li>사용자 입력 처리:
               <ul className={styles.customList}>
-                <li>버튼 클릭 시 sort_names 함수를 사용하여 입력된 라인업 처리</li>
+                <li>버튼 클릭 시 <code className={styles.inlineCode}>sort_names</code> 함수를 사용하여 입력된 라인업 처리</li>
                 <li>처리된 결과를 '정렬된 Lineup' 섹션에 표시</li>
               </ul>
           </li>
@@ -67,7 +67,7 @@ export default function DJLineupGenerator() {
         </ul>
 
         <h3>소스코드 속 핵심 함수</h3>
-        <p className={styles.bodyText}>`sort_names` 함수는 DJ 라인업을 알파벳 순서로 정렬하고, 중복된 이름을 제거한 뒤, 모두 대문자로 변환하여 결과를 출력하는 핵심 함수입니다. 자세히 살펴보겠습니다.</p>
+        <p className={styles.bodyText}><code className={styles.inlineCode}>sort_names</code> 함수는 DJ 라인업을 알파벳 순서로 정렬하고, 중복된 이름을 제거한 뒤, 모두 대문자로 변환하여 결과를 출력하는 핵심 함수입니다. 자세히 살펴보겠습니다.</p>
         <h3>텍스트 분할:</h3>
         <pre className={styles.codeBlock}><code>
 {`lines = text.split('\\n')`}
@@ -80,7 +80,7 @@ export default function DJLineupGenerator() {
         </code></pre>
         <ul className={styles.customList}>
           <li>각 줄에서 정규 표현식을 사용하여 시간 정보를 제거합니다.</li>
-          <li>`strip()`을 사용하여 앞뒤 공백을 제거합니다.</li>
+          <li><code className={styles.inlineCode}>strip()</code>을 사용하여 앞뒤 공백을 제거합니다.</li>
           <li>빈 줄은 무시합니다.</li>
         </ul>
         
@@ -89,10 +89,10 @@ export default function DJLineupGenerator() {
 {`return '\\n'.join(sorted(set(name.upper() for name in names)))`}
         </code></pre>
         <ul className={styles.customList}>
-          <li>`name.upper()`: 모든 이름을 대문자로 변환합니다.</li>
-          <li>`set()`: 중복된 이름을 제거합니다.</li>
-          <li>`sorted()`: 알파벳 순으로 정렬합니다.</li>
-          <li>`'\\n'.join()`: 정렬된 이름들을 줄바꿈으로 구분하여 하나의 문자열로 만듭니다.</li>
+          <li><code className={styles.inlineCode}>name.upper()</code>: 모든 이름을 대문자로 변환합니다.</li>
+          <li><code className={styles.inlineCode}>set()</code>: 중복된 이름을 제거합니다.</li>
+          <li><code className={styles.inlineCode}>sorted()</code>: 알파벳 순으로 정렬합니다.</li>
+          <li><code className={styles.inlineCode}>'\\n'.join()</code>: 정렬된 이름들을 줄바꿈으로 구분하여 하나의 문자열로 만듭니다.</li>
         </ul>
         <p className={styles.bodyText}>이 과정을 통해:</p>
         <ul className={styles.customList}>
@@ -102,11 +102,11 @@ export default function DJLineupGenerator() {
           <li>이름들이 알파벳 순으로 정렬됩니다.</li>
           <li>각 이름이 새 줄에 표시됩니다.</li>
         </ul>
-        <p className={styles.bodyText}>Python의 `sorted()` 함수는 기본적으로 알파벳 순으로 정렬하며, `set()`은 중복을 자동으로 제거합니다. 이 두 기능을 조합하여 원하는 결과를 얻을 수 있습니다.</p>
+        <p className={styles.bodyText}>Python의 <code className={styles.inlineCode}>sorted()</code> 함수는 기본적으로 알파벳 순으로 정렬하며, <code className={styles.inlineCode}>set()</code>은 중복을 자동으로 제거합니다. 이 두 기능을 조합하여 원하는 결과를 얻을 수 있습니다.</p>
 
         <h2>테스트</h2>
         <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbd3fd748-abfb-453d-a988-56268eecc1cb%2F656f2d4c-0f27-4fc4-9b4a-e0788721e0b3%2FScreenshot_2024-07-31_at_11.51.59_PM.png?table=block&id=09454b22-49e3-4dcf-9834-a65a7c4decf1&spaceId=bd3fd748-abfb-453d-a988-56268eecc1cb&width=2000&userId=c5a21a5c-bcab-4789-a4d7-b09c43662fb2&cache=v2" alt="Screenshot 2024-07-31 at 11.51.59 PM" className={styles.contentImage} />
-        <p className={styles.bodyText}>제가 일일이 중복된 이름을 제거하고 알파벳 순서대로 정리한 것과 동일하게, `sort_names` 함수가 정확하게 작동하는 것을 확인할 수 있었습니다.</p>
+        <p className={styles.bodyText}>제가 일일이 중복된 이름을 제거하고 알파벳 순서대로 정리한 것과 동일하게, <code className={styles.inlineCode}>sort_names</code> 함수가 정확하게 작동하는 것을 확인할 수 있었습니다.</p>
 
         <h2>UX 개선</h2>
         <ul className={styles.customList}>
