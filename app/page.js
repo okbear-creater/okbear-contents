@@ -35,6 +35,9 @@ export default function Home() {
       <Link href="/10-rabbit-r1-plus">
         <h1>10-rabbit-r1-plus</h1>
       </Link>
+      <Link href="/11-dj-lineup-generator">
+        <h1>11-dj-lineup-generator</h1>
+      </Link>
     </main>
   );
 }
