@@ -108,21 +108,24 @@
 }
 
 .main :global(.markdown pre) {
-  background-color: #f6f8fa;
-  border-radius: 3px;
+  background-color: #1e1e1e;
+  border-radius: 4px;
   padding: 16px;
   overflow: auto;
-  width: 100%;
-  font-size: clamp(12px, 1.8vw, 15px);
+  width: 104%;
+  margin-left: -2%;
+  margin-right: -2%;
+  font-size: 14px;
+  margin-bottom: 1em;
 }
 
 .main :global(.markdown code) {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #2c3e50;
-  color: #ecf0f1;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  background-color: #1e1e1e;
+  color: #d1d5db;
   padding: 0.2em 0.4em;
-  border-radius: 3px;
-  font-size: clamp(12px, 1.8vw, 15px);
+  border-radius: 4px;
+  font-size: 85%;
 }
 
 .main :global(.markdown ul), .main :global(.markdown ol) {
@@ -227,14 +230,14 @@
 }
 
 .codeBlock {
-  background-color: black;
-  border: 2px solid white;
-  border-radius: 0px;
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 4px;
   padding: 16px;
-  margin: 16px 0;
+  margin: 1em -2%;
   overflow-x: auto;
-  max-width: 100%;
-  font-size: clamp(12px, 1.8vw, 15px);
+  width: 104%;
+  font-size: 14px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -243,25 +246,22 @@
   display: none;
 }
 
-
 .codeBlock code {
-  font-family: 'Courier New', Courier, monospace;
-  color: white;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  color: #d1d5db;
   white-space: pre;
   display: inline-block;
   min-width: 100%;
 }
 
 .inlineCode {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: black;
-  color: white;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  background-color: #1e1e1e;
+  color: #d1d5db;
   padding: 2px 4px;
-  border-radius: 999px;
-  border: 1px solid white;
-  margin-left: 0px;
-  margin-right: 6px;
-  font-size: clamp(12px, 1.8vw, 15px);
+  border-radius: 4px;
+  border: none;
+  font-size: 85%;
 }
 
 .titleGroup {
@@ -303,6 +303,13 @@
     width: clamp(104%, 110%, 120%);
     margin-left: clamp(-10%, -5%, -2%);
     margin-right: clamp(-10%, -5%, -2%);
+  }
+
+  .codeBlock,
+  .main :global(.markdown pre) {
+    width: 106%;
+    margin-left: -3%;
+    margin-right: -3%;
   }
 }
 
