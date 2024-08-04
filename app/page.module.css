@@ -76,6 +76,12 @@
   font-weight: bold;
 }
 
+.main :global(.markdown h1),
+.main :global(.markdown h2),
+.main :global(.markdown h3) {
+  text-align: center;
+}
+
 .main :global(.markdown h1) {
   font-size: clamp(1.8em, 4vw, 2.2em);
   border-bottom: 1px solid #000;
@@ -131,14 +137,16 @@
   font-weight: bold;
 }
 
-.main :global(.markdown ul), .main :global(.markdown ol) {
+.main :global(.markdown ul), 
+.main :global(.markdown ol) {
   padding-left: 1em;
   margin-left: 0;
   margin-bottom: 1em;
   line-height: 1.8;
 }
 
-.main :global(.markdown ul li), .main :global(.markdown ol li) {
+.main :global(.markdown ul li), 
+.main :global(.markdown ol li) {
   margin-bottom: 0.5em;
 }
 
@@ -171,19 +179,19 @@
   font-size: clamp(14px, 2vw, 16px);
 }
 
-.bodyText {
+.bodyText,
+.quote,
+.customList {
   line-height: 1.8;
   margin-bottom: 1em;
   font-size: clamp(14px, 2vw, 16px);
 }
 
 .quote {
-  line-height: 1.8;
   margin: 0em 0;
   padding: 0 2% 0 calc(2% + 6px);
   text-align: left;
   position: relative;
-  font-size: clamp(14px, 2vw, 16px);
 }
 
 .quote::before {
@@ -223,9 +231,6 @@
 .customList {
   padding-left: 1em;
   margin-left: 0;
-  margin-bottom: 1em;
-  line-height: 1.8;
-  font-size: clamp(14px, 2vw, 16px);
 }
 
 .customList li {
