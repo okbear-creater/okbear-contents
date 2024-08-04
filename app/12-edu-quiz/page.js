@@ -8,7 +8,7 @@ export default function ETBPage() {
     <div className={styles.container}>
       <main className={`${styles.main} markdown`}>
         <div className={styles.titleGroup}>
-          <h2 className={styles.title}>Gemini API를 이용한 영어 문제 출제 툴</h2>
+          <h2 className={styles.title}>Gemini API를 이용한 영어 문제 출제 툴 제작 과정</h2>
           <h3 className={styles.subtitle}>Gemini 1.5 Flash를 학습시키는 과정과 영어 문제 출제에 활용할 수 있는 서비스 제작 과정</h3>
         </div>
         <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbd3fd748-abfb-453d-a988-56268eecc1cb%2F5db28816-afa1-432e-9c08-0fdc9287de31%2Fewjofwepgjowpjoge.jpg?table=block&id=d48699bd-82aa-4fa5-bfed-32bf19bb788b&spaceId=bd3fd748-abfb-453d-a988-56268eecc1cb&width=2000&userId=c5a21a5c-bcab-4789-a4d7-b09c43662fb2&cache=v2" alt="ewjofwepgjowpjoge.jpg" className={styles.contentImage} />
