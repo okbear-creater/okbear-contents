@@ -1,0 +1,354 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.topBanner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
+
+.topBannerHidden {
+  transform: translateY(-100%);
+}
+
+.bannerContent {
+  font-size: clamp(14px, 2.5vw, 16px);
+  font-weight: bold;
+}
+
+.scrollingImages {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  animation: scroll 20s linear infinite;
+}
+
+.scrollImage {
+  height: clamp(60px, 8vw, 80px);
+  margin-right: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 4));
+  }
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 5%;
+  margin-top: clamp(100px, 15vw, 180px);
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main :global(.markdown) {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: white;
+  width: 100%;
+}
+
+.main :global(.markdown h1) {
+  font-size: clamp(1.8em, 4vw, 2.2em);
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3em;
+}
+
+.main :global(.markdown h2) {
+  font-size: clamp(1.5em, 3.5vw, 2em);
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3em;
+}
+
+.main :global(.markdown h3) {
+  font-size: clamp(1.2em, 3vw, 1.6em);
+}
+
+.contentImage,
+.main :global(.markdown img) {
+  width: 104%;
+  max-width: 104%;
+  height: auto;
+  display: block;
+  margin: 1rem -2%;
+  border-radius: 8px;
+}
+
+.main :global(.markdown blockquote) {
+  border-left: 4px solid #ddd;
+  padding-left: 1em;
+  color: #777;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.main :global(.markdown pre) {
+  background-color: #1e1e1e;
+  border-radius: 4px;
+  padding: 16px;
+  overflow: auto;
+  width: 104%;
+  margin-left: -2%;
+  margin-right: -2%;
+  font-size: 14px;
+  margin-bottom: 1em;
+}
+
+.main :global(.markdown code) {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  background-color: #1e1e1e;
+  color: #d1d5db;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 85%;
+}
+
+.main :global(.markdown ul), .main :global(.markdown ol) {
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  line-height: 1.8;
+}
+
+.main :global(.markdown ul li), .main :global(.markdown ol li) {
+  margin-bottom: 0.5em;
+}
+
+.main :global(.markdown a) {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main :global(.markdown a:hover) {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.main :global(.markdown figure) {
+  margin: 1em -2%;
+  text-align: center;
+}
+
+.main :global(.markdown figcaption) {
+  font-style: italic;
+  color: #999;
+  margin-top: 0.5em;
+  font-size: clamp(12px, 1.8vw, 14px);
+}
+
+.main :global(.markdown p) {
+  line-height: 1.5;
+  margin-bottom: 1em;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.bodyText {
+  line-height: 1.8;
+  margin-bottom: 1em;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.quote {
+  line-height: 1.8;
+  margin: 0em 0;
+  padding: 0 2% 0 calc(2% + 6px);
+  text-align: left;
+  position: relative;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.quote::before {
+  content: '';
+  position: absolute;
+  left: 0%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: white;
+}
+
+.hyperlink {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.hyperlink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.hyperlink:hover::after {
+  opacity: 1;
+}
+
+.customList {
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  line-height: 1.8;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.customList li {
+  margin-bottom: 0.5em;
+}
+
+.codeBlock {
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 4px;
+  padding: 16px;
+  margin: 1em -2%;
+  overflow-x: auto;
+  width: 104%;
+  font-size: 14px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.codeBlock::-webkit-scrollbar {
+  display: none;
+}
+
+.codeBlock code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  color: #d1d5db;
+  white-space: pre;
+  display: inline-block;
+  min-width: 100%;
+}
+
+.inlineCode {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  background-color: #1e1e1e;
+  color: #d1d5db;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: none;
+  font-size: 85%;
+}
+
+.titleGroup {
+  margin-bottom: 50px;
+  width: clamp(100%, 120%, 140%);
+  margin-left: clamp(-20%, -10%, -5%);
+  margin-right: clamp(-20%, -10%, -5%);
+}
+
+.title {
+  font-size: clamp(32px, 7vw, 56px);
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: clamp(18px, 3.5vw, 26px);
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.greyGrade {
+  color: #929292;
+}
+
+.whiteGrade {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem 3%;
+    margin-top: clamp(80px, 12vw, 120px);
+  }
+  
+  .titleGroup {
+    width: clamp(104%, 110%, 120%);
+    margin-left: clamp(-10%, -5%, -2%);
+    margin-right: clamp(-10%, -5%, -2%);
+  }
+
+  .codeBlock,
+  .main :global(.markdown pre) {
+    width: 106%;
+    margin-left: -3%;
+    margin-right: -3%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main {
+    max-width: 800px;
+  }
+
+  .main :global(.markdown p),
+  .bodyText,
+  .quote,
+  .customList {
+    font-size: 16px;
+  }
+
+  .main :global(.markdown h1) {
+    font-size: 2.2em;
+  }
+
+  .main :global(.markdown h2) {
+    font-size: 2em;
+  }
+
+  .main :global(.markdown h3) {
+    font-size: 1.6em;
+  }
+
+  .codeBlock,
+  .main :global(.markdown pre),
+  .main :global(.markdown code),
+  .inlineCode {
+    font-size: 15px;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .subtitle {
+    font-size: 26px;
+  }
+}

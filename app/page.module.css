@@ -2,9 +2,10 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 .topBanner {
@@ -13,7 +14,7 @@
   left: 0;
   width: 100%;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
@@ -42,6 +43,7 @@
 .scrollImage {
   height: clamp(60px, 8vw, 80px);
   margin-right: 0;
+  border: 2px solid rgb(0, 0, 248);
 }
 
 @keyframes scroll {
@@ -58,10 +60,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 2rem 5%;
+  padding: 2rem 2%;
   margin-top: clamp(100px, 15vw, 180px);
-  width: 90%;
-  max-width: 800px;
+  width: 96%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -69,19 +71,20 @@
 .main :global(.markdown) {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  color: white;
+  color: black;
   width: 100%;
+  font-weight: bold;
 }
 
 .main :global(.markdown h1) {
   font-size: clamp(1.8em, 4vw, 2.2em);
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #000;
   padding-bottom: 0.3em;
 }
 
 .main :global(.markdown h2) {
   font-size: clamp(1.5em, 3.5vw, 2em);
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #000;
   padding-bottom: 0.3em;
 }
 
@@ -91,41 +94,41 @@
 
 .contentImage,
 .main :global(.markdown img) {
-  width: 104%;
-  max-width: 104%;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
-  margin: 1rem -2%;
-  border-radius: 8px;
+  margin: 1rem 0;
+  border: 2px solid rgb(0, 0, 248);
 }
 
 .main :global(.markdown blockquote) {
-  border-left: 4px solid #ddd;
+  border-left: 4px solid #000;
   padding-left: 1em;
-  color: #777;
+  color: #333;
   margin-left: 0;
   margin-right: 0;
 }
 
 .main :global(.markdown pre) {
-  background-color: #1e1e1e;
-  border-radius: 4px;
+  background-color: #f0f0f0;
+  border-radius: 0;
   padding: 16px;
   overflow: auto;
-  width: 104%;
-  margin-left: -2%;
-  margin-right: -2%;
+  width: 100%;
   font-size: 14px;
   margin-bottom: 1em;
+  border: 2px solid rgb(0, 0, 248);
 }
 
 .main :global(.markdown code) {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  background-color: #1e1e1e;
-  color: #d1d5db;
+  background-color: #f0f0f0;
+  color: #000;
   padding: 0.2em 0.4em;
-  border-radius: 4px;
+  border-radius: 0;
   font-size: 85%;
+  font-weight: bold;
 }
 
 .main :global(.markdown ul), .main :global(.markdown ol) {
@@ -140,24 +143,24 @@
 }
 
 .main :global(.markdown a) {
-  color: #3498db;
+  color: rgb(0, 0, 248);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .main :global(.markdown a:hover) {
-  color: #2980b9;
+  color: rgb(0, 0, 200);
   text-decoration: underline;
 }
 
 .main :global(.markdown figure) {
-  margin: 1em -2%;
+  margin: 1em 0;
   text-align: center;
 }
 
 .main :global(.markdown figcaption) {
   font-style: italic;
-  color: #999;
+  color: #333;
   margin-top: 0.5em;
   font-size: clamp(12px, 1.8vw, 14px);
 }
@@ -190,7 +193,7 @@
   top: 0;
   bottom: 0;
   width: 4px;
-  background-color: white;
+  background-color: black;
 }
 
 .hyperlink {
@@ -208,7 +211,7 @@
   bottom: 0px;
   width: 100%;
   height: 1px;
-  background-color: white;
+  background-color: black;
   opacity: 0.5;
   transition: opacity 0.3s ease;
 }
@@ -230,13 +233,13 @@
 }
 
 .codeBlock {
-  background-color: #1e1e1e;
-  border: none;
-  border-radius: 4px;
+  background-color: #f0f0f0;
+  border: 2px solid rgb(0, 0, 248);
+  border-radius: 0;
   padding: 16px;
-  margin: 1em -2%;
+  margin: 1em 0;
   overflow-x: auto;
-  width: 104%;
+  width: 100%;
   font-size: 14px;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -248,27 +251,27 @@
 
 .codeBlock code {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  color: #d1d5db;
+  color: #000;
   white-space: pre;
   display: inline-block;
   min-width: 100%;
+  font-weight: bold;
 }
 
 .inlineCode {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  background-color: #1e1e1e;
-  color: #d1d5db;
+  background-color: #f0f0f0;
+  color: #000;
   padding: 2px 4px;
-  border-radius: 4px;
+  border-radius: 0;
   border: none;
   font-size: 85%;
+  font-weight: bold;
 }
 
 .titleGroup {
   margin-bottom: 50px;
-  width: clamp(100%, 120%, 140%);
-  margin-left: clamp(-20%, -10%, -5%);
-  margin-right: clamp(-20%, -10%, -5%);
+  width: 100%;
 }
 
 .title {
@@ -281,41 +284,37 @@
 .subtitle {
   font-size: clamp(18px, 3.5vw, 26px);
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.4;
 }
 
 .greyGrade {
-  color: #929292;
+  color: #333;
 }
 
 .whiteGrade {
-  color: white;
+  color: black;
 }
 
 @media (max-width: 768px) {
   .main {
-    padding: 1rem 3%;
+    padding: 1rem 2%;
     margin-top: clamp(80px, 12vw, 120px);
   }
   
   .titleGroup {
-    width: clamp(104%, 110%, 120%);
-    margin-left: clamp(-10%, -5%, -2%);
-    margin-right: clamp(-10%, -5%, -2%);
+    width: 100%;
   }
 
   .codeBlock,
   .main :global(.markdown pre) {
-    width: 106%;
-    margin-left: -3%;
-    margin-right: -3%;
+    width: 100%;
   }
 }
 
 @media (min-width: 1400px) {
   .main {
-    max-width: 800px;
+    max-width: 1200px;
   }
 
   .main :global(.markdown p),
