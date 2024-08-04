@@ -38,6 +38,9 @@ export default function Home() {
       <Link href="/11-dj-lineup-generator">
         <h1>11-dj-lineup-generator</h1>
       </Link>
+      <Link href="/12-edu-quiz">
+        <h1>12-edu-quiz</h1>
+      </Link>
     </main>
   );
 }
