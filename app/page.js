@@ -41,6 +41,9 @@ export default function Home() {
       <Link href="/12-edu-quiz">
         <h1>12-edu-quiz</h1>
       </Link>
+      <Link href="/13-how-to-get-rich">
+        <h1>13-how-to-get-rich</h1>
+      </Link>
     </main>
   );
 }
