@@ -8,8 +8,8 @@ export default function CupidChatCuePage() {
     <div className={styles.container}>
       <main className={`${styles.main} markdown`}>
         <div className={styles.titleGroup}>
-          <h2 className={styles.title}>Building Cupid Chat Cue from Concept to Conversation Assistant</h2>
-          <h3 className={styles.subtitle}>Developing Cupid Chat Cue for Better, More Engaging Conversations</h3>
+          <h2 className={styles.title}>Developing Cupid Chat Cue for Better, More Engaging Chats</h2>
+          <h3 className={styles.subtitle}>From Concept to an Automated Processing Assistant with Google Gemini API</h3>
         </div>
         <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbd3fd748-abfb-453d-a988-56268eecc1cb%2Fb0aa5502-30bc-4299-8d03-e517796517f9%2Fwfejpo_2.jpg?table=block&id=76eada27-978d-49a4-8d75-1ca49e4e2448&spaceId=bd3fd748-abfb-453d-a988-56268eecc1cb&width=2000&userId=c5a21a5c-bcab-4789-a4d7-b09c43662fb2&cache=v2" alt="wfejpo 2" className={styles.contentImage} />
         
