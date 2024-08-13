@@ -44,6 +44,12 @@ export default function Home() {
       <Link href="/13-how-to-get-rich">
         <h1>13-how-to-get-rich</h1>
       </Link>
+      <Link href="/14-jocoding-google-presentation">
+        <h1>14-jocoding-google-presentation</h1>
+      </Link>
+      <Link href="/15-cupid-chat-cue">
+        <h1>15-cupid-chat-cue</h1>
+      </Link>
     </main>
   );
 }
