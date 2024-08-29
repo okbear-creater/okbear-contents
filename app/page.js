@@ -50,6 +50,9 @@ export default function Home() {
       <Link href="/15-cupid-chat-cue">
         <h1>15-cupid-chat-cue</h1>
       </Link>
+      <Link href="/16-gongik-lupin">
+        <h1>16-gongik-lupin</h1>
+      </Link>
     </main>
   );
 }
